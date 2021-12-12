@@ -6,62 +6,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>My Portfolio</title>
     <style>
+      html {
+        overflow: auto;
+      }
+
       html,
-      body {
+      body,
+      div,
+      iframe {
+        margin: 0px;
+        padding: 0px;
         height: 100%;
+        border: none;
       }
-      :root {
-        --dark-bg: #322f3d;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        height: 100%;
-        margin: 0;
-        background-color: var(--dark-bg);
-      }
-      .app {
-        height: 100%;
+      iframe {
+        display: block;
         width: 100%;
-      }
-      .centereddiv {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .big-loader {
-        --loader-thickness: 3px;
-        --loader-size: 60px;
-        height: var(--loader-size);
-        width: var(--loader-size);
-        border: var(--loader-thickness) solid transparent;
-        box-shadow: 0 2px 0 2px rgb(157, 103, 224, 0.8);
-        padding: 10px;
-        border-radius: 50%;
-        animation: loading 1s linear infinite;
-      }
-
-      @keyframes loading {
-        0% {
-          transform: rotate(0deg);
-        }
-        50% {
-          transform: rotate(180deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+        border: none;
+        overflow-y: auto;
+        overflow-x: hidden;
       }
     </style>
     <script defer="defer" src="/assets/main.js"></script>
   </head>
   <body>
-    <div class="app" id="root">
-      <div class="centereddiv"><div class="big-loader"></div></div>
-    </div>
+    <iframe
+      src="https://sivapriya-v.herokuapp.com"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      width="100%"
+      height="100%"
+      scrolling="auto"
+    >
+    </iframe>
   </body>
 </html>
